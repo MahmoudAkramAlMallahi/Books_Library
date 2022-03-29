@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_updateBook">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/updateBook_civ_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/img_book_splash"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/updateBook_fab_btnImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_image"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_civ_image"
+        app:layout_constraintBottom_toBottomOf="@id/updateBook_civ_image"
+        app:layout_constraintLeft_toLeftOf="@id/updateBook_civ_image"/>
+
+    <View
+        android:id="@+id/updateBook_view"
+        android:background="#888787"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_fab_btnImage" />
+
+
+
+    <EditText
+        android:id="@+id/updateBook_et_nameBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Book Name"
+        android:drawablePadding="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_book_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_view" />
+
+    <EditText
+        android:id="@+id/updateBook_et_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Author Name"
+        android:drawablePadding="5dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_name_author"
+        app:layout_constraintEnd_toEndOf="@id/updateBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/updateBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_et_nameBook" />
+
+    <EditText
+        android:id="@+id/updateBook_et_release"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Release Year"
+        android:drawablePadding="5dp"
+        android:inputType="number"
+        android:drawableStart="@drawable/ic_release_year"
+        app:layout_constraintEnd_toEndOf="@id/updateBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/updateBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_et_author" />
+
+    <EditText
+        android:id="@+id/updateBook_et_pages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Pages Number"
+        android:drawablePadding="5dp"
+        android:inputType="number"
+        android:drawableStart="@drawable/ic_pages_number"
+        app:layout_constraintEnd_toEndOf="@id/updateBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/updateBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_et_release" />
+
+    <EditText
+        android:id="@+id/updateBook_et_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_category"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:hint="Category Id"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="@id/updateBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/updateBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_et_pages" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateBook_btn_create"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Update"
+        android:layout_marginHorizontal="4dp"
+        app:layout_constraintEnd_toEndOf="@id/updateBook_et_pages"
+        app:layout_constraintStart_toStartOf="@id/updateBook_et_pages"
+        app:layout_constraintTop_toBottomOf="@id/updateBook_et_category" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

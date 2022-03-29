@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent"
+    tools:context=".Activity_create_book">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/createBook_civ_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/img_book_splash"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createBook_fab_btnImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_image"
+        app:layout_constraintTop_toBottomOf="@id/createBook_civ_image"
+        app:layout_constraintBottom_toBottomOf="@id/createBook_civ_image"
+        app:layout_constraintLeft_toLeftOf="@id/createBook_civ_image"/>
+
+    <View
+        android:id="@+id/createBook_view"
+        android:background="#888787"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createBook_fab_btnImage" />
+
+    <TextView
+        android:id="@+id/createBook_tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Category"
+        android:textSize="25sp"
+        android:drawableStart="@drawable/ic_category"
+        android:drawablePadding="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createBook_view"/>
+
+    <Spinner
+        android:id="@+id/createBook_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/createBook_tv_category"
+        app:layout_constraintStart_toEndOf="@id/createBook_tv_category"
+        app:layout_constraintTop_toTopOf="@id/createBook_tv_category" />
+
+
+
+    <EditText
+        android:id="@+id/createBook_et_nameBook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Book Name"
+        android:drawablePadding="5dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_book_name"
+        app:layout_constraintEnd_toEndOf="@id/createBook_spinner"
+        app:layout_constraintStart_toStartOf="@id/createBook_tv_category"
+        app:layout_constraintTop_toBottomOf="@id/createBook_tv_category" />
+
+    <EditText
+        android:id="@+id/createBook_et_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Author Name"
+        android:drawablePadding="5dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_name_author"
+        app:layout_constraintEnd_toEndOf="@id/createBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/createBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/createBook_et_nameBook" />
+
+    <EditText
+        android:id="@+id/createBook_et_release"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Release Year"
+        android:drawablePadding="5dp"
+        android:inputType="number"
+        android:drawableStart="@drawable/ic_release_year"
+        app:layout_constraintEnd_toEndOf="@id/createBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/createBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/createBook_et_author" />
+
+    <EditText
+        android:id="@+id/createBook_et_pages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Pages Number"
+        android:drawablePadding="5dp"
+        android:inputType="number"
+        android:drawableStart="@drawable/ic_pages_number"
+        app:layout_constraintEnd_toEndOf="@id/createBook_et_nameBook"
+        app:layout_constraintStart_toStartOf="@id/createBook_et_nameBook"
+        app:layout_constraintTop_toBottomOf="@id/createBook_et_release" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createBook_btn_create"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Create"
+        android:layout_marginHorizontal="4dp"
+        app:layout_constraintEnd_toEndOf="@id/createBook_et_pages"
+        app:layout_constraintStart_toStartOf="@id/createBook_et_pages"
+        app:layout_constraintTop_toBottomOf="@id/createBook_et_pages" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
